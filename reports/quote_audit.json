@@ -1,0 +1,32 @@
+[
+  {
+    "raw_quotes": 38,
+    "invalid_quotes": 0,
+    "date": "2024-09-17",
+    "expiry": "2024-10-18",
+    "spot": 563.07,
+    "forward": 563.9540428245795,
+    "forward_pair_count": 5,
+    "forward_pair_range": 1.3455416848598816,
+    "days_to_expiry": 31,
+    "removed_itm_or_spread": 23,
+    "inversion_failures": 0,
+    "valid_otm_quotes": 15,
+    "fit_quotes": 10
+  },
+  {
+    "raw_quotes": 38,
+    "invalid_quotes": 0,
+    "date": "2024-09-19",
+    "expiry": "2024-10-18",
+    "spot": 570.98,
+    "forward": 571.3650593051143,
+    "forward_pair_count": 5,
+    "forward_pair_range": 1.4019000971343303,
+    "days_to_expiry": 29,
+    "removed_itm_or_spread": 22,
+    "inversion_failures": 0,
+    "valid_otm_quotes": 16,
+    "fit_quotes": 9
+  }
+]

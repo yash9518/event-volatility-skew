@@ -1,0 +1,54 @@
+{
+  "provider": "DoltHub post-no-preference/options and stocks; third-party daily snapshots",
+  "retrieved_utc": "2026-10-01T23:09:05.358107+00:00",
+  "ref": "master",
+  "event": "FOMC September 18, 2024, 14:00 America/New_York",
+  "event_source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240918a.htm",
+  "symbol": "SPY",
+  "dates": [
+    "2024-09-17",
+    "2024-09-19"
+  ],
+  "expiry": "2024-10-18",
+  "normalized_sha256": "3e13d65ccabb7ac287614d7a64181ade6a66e49688ffb5dd82eadeb462049a58",
+  "sources": [
+    {
+      "database": "options",
+      "date": "2024-09-17",
+      "query": "SELECT * FROM option_chain WHERE date='2024-09-17' AND act_symbol='SPY' AND expiration='2024-10-18' LIMIT 1000",
+      "url": "https://www.dolthub.com/api/v1alpha1/post-no-preference/options/master?q=SELECT+%2A+FROM+option_chain+WHERE+date%3D%272024-09-17%27+AND+act_symbol%3D%27SPY%27+AND+expiration%3D%272024-10-18%27+LIMIT+1000",
+      "rows": 38,
+      "sha256": "d3ffea4ead86d538b8030a07f621610ed09833503477699d77ba5c792b776f7e"
+    },
+    {
+      "database": "stocks",
+      "date": "2024-09-17",
+      "query": "SELECT * FROM ohlcv WHERE date='2024-09-17' AND act_symbol='SPY' LIMIT 2",
+      "url": "https://www.dolthub.com/api/v1alpha1/post-no-preference/stocks/master?q=SELECT+%2A+FROM+ohlcv+WHERE+date%3D%272024-09-17%27+AND+act_symbol%3D%27SPY%27+LIMIT+2",
+      "rows": 1,
+      "sha256": "19bf40550cdfad55af6c29b5773726394b2f8fa3596bbb746e4718d5d38c317b"
+    },
+    {
+      "database": "options",
+      "date": "2024-09-19",
+      "query": "SELECT * FROM option_chain WHERE date='2024-09-19' AND act_symbol='SPY' AND expiration='2024-10-18' LIMIT 1000",
+      "url": "https://www.dolthub.com/api/v1alpha1/post-no-preference/options/master?q=SELECT+%2A+FROM+option_chain+WHERE+date%3D%272024-09-19%27+AND+act_symbol%3D%27SPY%27+AND+expiration%3D%272024-10-18%27+LIMIT+1000",
+      "rows": 38,
+      "sha256": "a4d1122ab6d1497cffa74cc241244d3c1cf0eda2ae9530b86db30ceff3b1ad19"
+    },
+    {
+      "database": "stocks",
+      "date": "2024-09-19",
+      "query": "SELECT * FROM ohlcv WHERE date='2024-09-19' AND act_symbol='SPY' LIMIT 2",
+      "url": "https://www.dolthub.com/api/v1alpha1/post-no-preference/stocks/master?q=SELECT+%2A+FROM+ohlcv+WHERE+date%3D%272024-09-19%27+AND+act_symbol%3D%27SPY%27+LIMIT+2",
+      "rows": 1,
+      "sha256": "867f4f6d1fcb9ad145d35f74db1e4bd84e85fefb837f2f04118dfcbb8f9b1c15"
+    }
+  ],
+  "caveats": [
+    "No intraday quote timestamps in this source",
+    "No volume/open interest fields",
+    "Sparse selected strikes, not a complete exchange chain",
+    "master can change; raw response hashes identify this run"
+  ]
+}
